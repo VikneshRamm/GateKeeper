@@ -1,0 +1,14 @@
+.app-pages-container {
+    width: 100%;
+    height: calc(100% - 70px);    
+    position: relative;
+    top: 70px
+}
+
+.root-div {
+    height: 100%;
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+}
