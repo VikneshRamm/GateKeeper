@@ -46,8 +46,8 @@
 }
 
 .home-page-sign-in-but {
-    background: black url("../../assets/google-logo.png");
-    color: white;
+    background: black !important;
+    color: white !important;
     font-family: "Roboto";
     font-weight: bold;
     width: 180px;
@@ -75,5 +75,12 @@
 .home-page-sign-in-but p {
     position: relative;
     left: 15px;
+}
+
+.signin-button-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
 }
 
