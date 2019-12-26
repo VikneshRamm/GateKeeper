@@ -2,4 +2,13 @@
   <div class="header-app-name">
     GateKeeper
   </div>
+  <div class="header-user-img-holder" *ngIf="isSignedin">
+    <div class="header-user-name"> {{name}}</div>
+    <div class="header-user-img">
+      <img [src]="imgURL">
+    </div>
+    <div class="header-user-logout" (click)="logOut()" *ngIf="showLogOutButton">
+      Logout
+    </div>
+  </div>
 </div>
