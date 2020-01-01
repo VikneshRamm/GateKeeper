@@ -1,15 +1,16 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { GsigninService } from '../gsignin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public gSignInService: GsigninService, private eRef: ElementRef) { }
+  constructor(public gSignInService: GsigninService, private eRef: ElementRef,
+              private router: Router) { }
 
   name: string;
   imgURL: string;
@@ -46,7 +47,6 @@ export class HeaderComponent implements OnInit {
   }
 
   hideLogOutButton() {
-    console.log("Blur event")
     this.showLogOutButton = false;
   }
 
@@ -58,5 +58,9 @@ export class HeaderComponent implements OnInit {
   //   console.log("SIgn In changed", value);
   //   this.isSignedin = value;
   // }
+
+  routeToHomePage() {
+    this.router.navigateByUrl('/');
+  }
 
 }
