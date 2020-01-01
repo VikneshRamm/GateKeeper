@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { GsigninService } from '../gsignin.service';
 declare const gapi: any;
 
@@ -7,21 +7,26 @@ declare const gapi: any;
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent implements OnInit, AfterViewInit {
+export class HomepageComponent implements OnInit, AfterViewChecked {
 
   // public gapi: any;
 
+  isSignedIn: boolean;
   constructor(public gSignInService: GsigninService) { }
 
   ngOnInit() {
+    this.isSignedIn = this.gSignInService.isUserSignedIn();
+    this.gSignInService.signInListener.subscribe((value) => {
+      this.isSignedIn = value;
+    });
   }
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      // FIX ME: The timeout is not required I guess. Needed to check.
-       this.gSignInService.googleInit();
-    }, 300);
+  ngAfterViewChecked() {
+    /* this is used to attach the sign in function for the button when
+     the button becomes visible*/
+    if (!this.isSignedIn) {
+      this.gSignInService.googleInit();
+    }
   }
-
 
 }
