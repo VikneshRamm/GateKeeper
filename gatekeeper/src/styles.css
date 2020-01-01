@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {font-family: "Agency FB Bold";
+    src: url("assets/fonts/Agency_FB_Bold/356e1c3e737c1bf31dea2ce604eec3ab.eot"); /* IE9*/
+    src: url("assets/fonts/Agency_FB_Bold/356e1c3e737c1bf31dea2ce604eec3ab.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("assets/fonts/Agency_FB_Bold/356e1c3e737c1bf31dea2ce604eec3ab.woff2") format("woff2"), /* chrome、firefox */
+    url("assets/fonts/Agency_FB_Bold/356e1c3e737c1bf31dea2ce604eec3ab.woff") format("woff"), /* chrome、firefox */
+    url("assets/fonts/Agency_FB_Bold/356e1c3e737c1bf31dea2ce604eec3ab.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("assets/fonts/Agency_FB_Bold/356e1c3e737c1bf31dea2ce604eec3ab.svg#Agency FB Bold") format("svg"); /* iOS 4.1- */
+  }
