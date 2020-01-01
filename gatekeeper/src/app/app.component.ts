@@ -9,9 +9,10 @@ import { GsigninService } from './gsignin.service';
 export class AppComponent implements OnInit {
   constructor(private gSignInService: GsigninService) { }
 
+  title = 'gatekeeper';
+
   ngOnInit() {
     // FIX ME: Need to check if this is required
     this.gSignInService.checkIfUserSignedIn();
   }
-  title = 'gatekeeper';
 }
