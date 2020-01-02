@@ -27,9 +27,11 @@ router.post('/add', (req, res) => {
 router.post('/token_id', (req, res) => {
     var userDetails;
 
+    // console.log(req.body.token);
+
     if (!req.body.token)
     {
-        res.status(400).json({msg: "Token Missing."});
+        return res.status(400).json({msg: "Token Missing."});
     }
 
     const CLIENT_ID = '819801723091-c220n12ttnnvbrdojs2m281svp52flfq.apps.googleusercontent.com';
