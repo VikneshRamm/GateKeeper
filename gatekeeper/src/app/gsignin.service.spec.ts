@@ -1,11 +1,11 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { GsigninService } from './gsignin.service';
+import { GsigninService } from "./gsignin.service";
 
-describe('GsigninService', () => {
+describe("GsigninService", () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
+  it("should be created", () => {
     const service: GsigninService = TestBed.get(GsigninService);
     expect(service).toBeTruthy();
   });

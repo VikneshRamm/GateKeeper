@@ -1,22 +1,21 @@
-import { Component, OnInit, AfterViewChecked } from '@angular/core';
-import { GsigninService } from '../gsignin.service';
+import { Component, OnInit, AfterViewChecked } from "@angular/core";
+import { GsigninService } from "../gsignin.service";
 declare const gapi: any;
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  selector: "app-homepage",
+  templateUrl: "./homepage.component.html",
+  styleUrls: ["./homepage.component.css"]
 })
 export class HomepageComponent implements OnInit, AfterViewChecked {
-
   // public gapi: any;
 
   isSignedIn: boolean;
-  constructor(public gSignInService: GsigninService) { }
+  constructor(public gSignInService: GsigninService) {}
 
   ngOnInit() {
     this.isSignedIn = this.gSignInService.isUserSignedIn();
-    this.gSignInService.signInListener.subscribe((value) => {
+    this.gSignInService.signInListener.subscribe(value => {
       this.isSignedIn = value;
     });
   }
@@ -28,5 +27,4 @@ export class HomepageComponent implements OnInit, AfterViewChecked {
       this.gSignInService.googleInit();
     }
   }
-
 }

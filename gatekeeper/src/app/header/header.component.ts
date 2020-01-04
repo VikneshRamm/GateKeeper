@@ -1,25 +1,27 @@
-import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
-import { GsigninService } from '../gsignin.service';
-import { Router } from '@angular/router';
+import { Component, OnInit, HostListener, ElementRef } from "@angular/core";
+import { GsigninService } from "../gsignin.service";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(public gSignInService: GsigninService, private eRef: ElementRef,
-              private router: Router) { }
+  constructor(
+    public gSignInService: GsigninService,
+    private eRef: ElementRef,
+    private router: Router
+  ) {}
 
   name: string;
   imgURL: string;
   isSignedin: boolean;
   showLogOutButton: boolean = false;
 
-  @HostListener('document:click', ['$event'])
+  @HostListener("document:click", ["$event"])
   clickout(event) {
-    if (event.target.className === 'header-user-img') {
+    if (event.target.className === "header-user-img") {
       this.toggleLogOutButton();
     } else {
       this.showLogOutButton = false;
@@ -27,7 +29,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.gSignInService.signInListener.subscribe((value) => {
+    this.gSignInService.signInListener.subscribe(value => {
       this.isSignedin = value;
       if (this.isSignedin) {
         console.log(this);
@@ -35,8 +37,8 @@ export class HeaderComponent implements OnInit {
         this.imgURL = userInfo.imgURL;
         this.name = userInfo.name;
       } else {
-        this.name = '';
-        this.imgURL = '';
+        this.name = "";
+        this.imgURL = "";
         this.showLogOutButton = false;
       }
     });
@@ -60,7 +62,6 @@ export class HeaderComponent implements OnInit {
   // }
 
   routeToHomePage() {
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl("/");
   }
-
 }

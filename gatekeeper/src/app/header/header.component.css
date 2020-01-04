@@ -1,71 +1,71 @@
 .header {
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    height: 70px;
-    background: black;
-    left: 0px;
-    z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  height: 70px;
+  background: black;
+  left: 0px;
+  z-index: 1;
 }
 
 .header-app-name {
-    color: white;
-    position: absolute;
-    left: 10px;
-    font-family: 'Agency FB Bold', arial;
-    font-size: 2.5rem;
-    line-height: 4rem;
-    cursor: pointer;
+  color: white;
+  position: absolute;
+  left: 10px;
+  font-family: "Agency FB Bold", arial;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  cursor: pointer;
 }
 
 .header-user-img-holder {
-    position: absolute;
-    right: 3px;
-    width: 200px;
-    height: 100%;
-    display: flex;
+  position: absolute;
+  right: 3px;
+  width: 200px;
+  height: 100%;
+  display: flex;
 }
 
-.header-user-img {    
-    height: 60%;
-    border-radius: 25px;
-    width: 44px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    float: right;
-    cursor: pointer;
-    overflow: hidden;
+.header-user-img {
+  height: 60%;
+  border-radius: 25px;
+  width: 44px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  float: right;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .header-user-name {
-    width: 150px;
-    color: white;
-    font-size: 16px;
-    font-family: Roboto;
-    line-height: 70px;
-    text-align: center;
+  width: 150px;
+  color: white;
+  font-size: 16px;
+  font-family: Roboto;
+  line-height: 70px;
+  text-align: center;
 }
 
 .header-user-img img {
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .header-user-logout {
-    position: absolute;
-    top: 100%;
-    height: 30px;
-    width: 100%;   
-    font-size: 16px;
-    font-family: Roboto;
-    line-height: 30px;
-    text-align: center;
-    right: -3px;
-    border: 1px solid;
-    border-radius: 2px;    
-    background: white;
-    font-weight: bold;
-    cursor: pointer;
+  position: absolute;
+  top: 100%;
+  height: 30px;
+  width: 100%;
+  font-size: 16px;
+  font-family: Roboto;
+  line-height: 30px;
+  text-align: center;
+  right: -3px;
+  border: 1px solid;
+  border-radius: 2px;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
 }
